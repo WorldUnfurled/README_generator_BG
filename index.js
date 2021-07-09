@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const headers = ['Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions'];
+const headers = ['Title', 'Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions'];
 
 inquirer
     .prompt([
@@ -52,7 +52,14 @@ inquirer
             message: "What is the Github profile for this project's repo?"
         }
     ]).then((data) => {
-        let logText = `#Title\n ${data.title}`;
+        const title = `#` + `${headers[0]}` + `\n` + `${data.title}` + `\n\n`;
+        const description = `##` + `${headers[1]}` + `\n` + `${data.description}` + `\n\n`;
+        const installation = `##` + `${headers[2]}` + `\n` + `${data.installation}` + `\n\n`;
+        const usage = `##` + `${headers[3]}` + `\n` + `${data.usage}` + `\n\n`;
+        const contributing = `##` + `${headers[4]}` + `\n` + `${data.contributing}` + `\n\n`;
+        const tests = `##` + `${headers[5]}` + `\n` + `${data.tests}` + `\n\n`;
+        const license = `##` + `${headers[6]}` + `\n` + `${data.license}` + `\n\n`;
+        const questions = `##` + `${headers[7]}` + `\n` + `${data.questions}` + `\n\n`;
 
         fs.writeFile('sampleREADME.md', logText, (err) => {
             err ? console.error(err) : console.log('Commit logged!')
