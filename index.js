@@ -52,14 +52,14 @@ inquirer
             message: "What is the Github profile for this project's repo?"
         }
     ]).then((data) => {
-        const title = `#` + `${headers[0]}` + `\n` + `${data.title}` + `\n\n`;
-        const description = `##` + `${headers[1]}` + `\n` + `${data.description}` + `\n\n`;
-        const installation = `##` + `${headers[2]}` + `\n` + `${data.installation}` + `\n\n`;
-        const usage = `##` + `${headers[3]}` + `\n` + `${data.usage}` + `\n\n`;
-        const contributing = `##` + `${headers[4]}` + `\n` + `${data.contributing}` + `\n\n`;
-        const tests = `##` + `${headers[5]}` + `\n` + `${data.tests}` + `\n\n`;
-        const license = `##` + `${headers[6]}` + `\n` + `${data.license}` + `\n\n`;
-        const questions = `##` + `${headers[7]}` + `\n` + `${data.qEmail}` + `\n` + `${data.qGithub}` + `\n\n`;
+        const title = `# ` + `${headers[0]}` + `\n` + `${data.title}` + `\n\n`;
+        const description = `## ` + `${headers[1]}` + `\n` + `${data.description}` + `\n\n`;
+        const installation = `## ` + `${headers[2]}` + `\n` + `${data.installation}` + `\n\n`;
+        const usage = `## ` + `${headers[3]}` + `\n` + `${data.usage}` + `\n\n`;
+        const contributing = `## ` + `${headers[4]}` + `\n` + `${data.contributing}` + `\n\n`;
+        const tests = `## ` + `${headers[5]}` + `\n` + `${data.tests}` + `\n\n`;
+        const license = `## ` + `${headers[6]}` + `\n` + `${data.license}` + `\n\n`;
+        const questions = `## ` + `${headers[7]}` + `\n` + `${data.qEmail}` + `\n` + `${data.qGithub}` + `\n\n`;
 
         readmeText = [];
         readmeText.push(title);
