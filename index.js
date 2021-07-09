@@ -47,4 +47,6 @@ inquirer
             name: 'qGithub',
             message: "What is the Github profile for this project's repo?"
         }
-    ]);
+    ]).then((data) => {
+        
+    });
