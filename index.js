@@ -1,7 +1,6 @@
-const inquirer = require("inquirer");
+import { prompt } from "inquirer";
 
-inquirer
-    .prompt([
+prompt([
         {
             type: 'input',
             name: 'title',
@@ -48,5 +47,5 @@ inquirer
             message: "What is the Github profile for this project's repo?"
         }
     ]).then((data) => {
-        
+
     });
