@@ -1,9 +1,0 @@
-#Title
- HelloDescription
-HelloInstallation
-HelloUsage
-HelloContributing
-HelloTests
-HelloLicense
-HelloQuestions
-Hello

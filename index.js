@@ -59,9 +59,23 @@ inquirer
         const contributing = `##` + `${headers[4]}` + `\n` + `${data.contributing}` + `\n\n`;
         const tests = `##` + `${headers[5]}` + `\n` + `${data.tests}` + `\n\n`;
         const license = `##` + `${headers[6]}` + `\n` + `${data.license}` + `\n\n`;
-        const questions = `##` + `${headers[7]}` + `\n` + `${data.questions}` + `\n\n`;
+        const questions = `##` + `${headers[7]}` + `\n` + `${data.qEmail}` + `\n` + `${data.qGithub}` + `\n\n`;
 
-        fs.writeFile('sampleREADME.md', logText, (err) => {
+        readmeText = [];
+        readmeText.push(title);
+        readmeText.push(description);
+        readmeText.push(installation);
+        readmeText.push(usage);
+        readmeText.push(tests);
+        readmeText.push(license);
+        readmeText.push(questions);
+
+        readmeGen = '';
+        for (i = 0; i < readmeText.length; i++) {
+            readmeGen += readmeText[i];
+        }
+
+        fs.writeFile('sampleREADME.md', readmeGen, (err) => {
             err ? console.error(err) : console.log('Commit logged!')
         });
         console.log(data.title);
