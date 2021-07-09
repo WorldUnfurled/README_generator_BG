@@ -1,4 +1,7 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
+
+const headers = ['Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions'];
 
 inquirer
     .prompt([
@@ -35,7 +38,8 @@ inquirer
         {
             type: 'list',
             name: 'license',
-            message: 'Choose a license your work will operate under.'
+            message: 'Choose a license your work will operate under.',
+            choices: ['MIT', 'Codecademy', 'CodeWars']
         },
         {
             type: 'input',
@@ -48,5 +52,10 @@ inquirer
             message: "What is the Github profile for this project's repo?"
         }
     ]).then((data) => {
-        console.log(data);
+        let logText = `#Title\n ${data.title}`;
+
+        fs.writeFile('sampleREADME.md', logText, (err) => {
+            err ? console.error(err) : console.log('Commit logged!')
+        });
+        console.log(data.title);
     });
