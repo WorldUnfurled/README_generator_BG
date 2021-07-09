@@ -1,0 +1,23 @@
+{
+  "name": "README_generator_BG",
+  "version": "1.0.0",
+  "description": "Sets up quality README files based on user input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WorldUnfurled/README_generator_BG.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WorldUnfurled/README_generator_BG/issues"
+  },
+  "homepage": "https://github.com/WorldUnfurled/README_generator_BG#readme",
+  "dependencies": {
+    "inquirer": "^8.1.1"
+  }
+}
