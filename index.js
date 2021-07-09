@@ -4,38 +4,47 @@ inquirer
     .prompt([
         {
             type: 'input',
-            name: 'title'
+            name: 'title',
+            message: 'What will the title of your work be?'
         },
         {   
             type: 'input',
-            name: 'description'
+            name: 'description',
+            message: 'Provide a description of your work.'
         },
         {
             type: 'input',
-            name: 'installation'
+            name: 'installation',
+            message: 'Provide any necessary installation instructions.'
         },
         {
             type: 'input',
-            name: 'usage'
+            name: 'usage',
+            message: 'How is your project used?'
         },
         {
             type: 'input',
-            name: 'contributing'
+            name: 'contributing',
+            message: 'Who contributed to this project?'
         },
         {
             type: 'input',
-            name: 'tests'
+            name: 'tests',
+            message: 'Detail tests run on your project.'
         },
         {
             type: 'list',
-            name: 'license'
+            name: 'license',
+            message: 'Choose a license your work will operate under.'
         },
         {
             type: 'input',
-            name: 'qEmail'
+            name: 'qEmail',
+            message: 'At what email can you be contacted with questions about your project?'
         },
         {
             type: 'input',
-            name: 'qGithub'
+            name: 'qGithub',
+            message: "What is the Github profile for this project's repo?"
         }
     ]);
