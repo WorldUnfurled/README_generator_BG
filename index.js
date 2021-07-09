@@ -66,6 +66,7 @@ inquirer
         readmeText.push(description);
         readmeText.push(installation);
         readmeText.push(usage);
+        readmeText.push(contributing);
         readmeText.push(tests);
         readmeText.push(license);
         readmeText.push(questions);
