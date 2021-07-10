@@ -14,6 +14,10 @@ Sets up quality README files based on user input.
 * All parts from the array are then concatenated into one formatted string which will be the text for the readme
 * Finally, a markdown file is created that is filled with the formatted string text, or an error is thrown based on the fs library writeFile method result
 
+## Video
+
+https://user-images.githubusercontent.com/80599137/125150419-b2788780-e10d-11eb-8b10-e5519f74c1a2.mp4
+
 ## E-Signature
 
 * Brooks Gunn :)
