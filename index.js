@@ -59,7 +59,7 @@ inquirer
         const contributing = `## ` + `${headers[4]}` + `\n\n` + `${data.contributing}` + `\n\n`;
         const tests = `## ` + `${headers[5]}` + `\n\n` + `${data.tests}` + `\n\n`;
         const license = `## ` + `${headers[6]}` + `\n\n` + `${data.license}` + `\n\n`;
-        const questions = `## ` + `${headers[7]}` + `\n\n` + `* ` + `${data.qEmail}` + `\n` + `* ` + `${data.qGithub}` + `\n\n`;
+        const questions = `## ` + `${headers[7]}` + `\n\n` + `* ` + `${data.qEmail}` + `\n` + `* ` + `https://github.com/` + `${data.qGithub}` + `\n\n`;
 
         readmeText = [];
         readmeText.push(title);
