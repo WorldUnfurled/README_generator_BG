@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const headers = ['Title', 'Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions'];
+const headers = ['Description', 'Installation', 'Usage', 'Contributing', 'Tests', 'License', 'Questions'];
 
 inquirer
     .prompt([
@@ -58,15 +58,15 @@ inquirer
             tableOfContents += `[` + `${i}` + `. ` + `${headers[i-1]}` + `]` + `(` + `#`  + `${headers[i-1]}` + `)` + `\n`;
         }
 
-        const title = `# ` + `${headers[0]}` + `\n\n`;
-        const tOC = `# ` + `Table of Contents` + `\n\n`;
-        const description = `\n\n` + `## ` + `${headers[1]}` + `\n\n` + `${data.description}` + `\n\n`;
-        const installation = `## ` + `${headers[2]}` + `\n\n` + `${data.installation}` + `\n\n`;
-        const usage = `## ` + `${headers[3]}` + `\n\n` + `${data.usage}` + `\n\n`;
-        const contributing = `## ` + `${headers[4]}` + `\n\n` + `${data.contributing}` + `\n\n`;
-        const tests = `## ` + `${headers[5]}` + `\n\n` + `${data.tests}` + `\n\n`;
-        const license = `## ` + `${headers[6]}` + `\n\n` + `${data.license}` + `\n\n`;
-        const questions = `## ` + `${headers[7]}` + `\n\n` + `* ` + `${data.qEmail}` + `\n` + `* ` + `https://github.com/` + `${data.qGithub}` + `\n\n`;
+        const title = `# ` + `${data.title}` + `\n\n`;
+        const tOC = `## ` + `Table of Contents` + `\n\n`;
+        const description = `\n\n` + `## ` + `${headers[0]}` + `\n\n` + `${data.description}` + `\n\n`;
+        const installation = `## ` + `${headers[1]}` + `\n\n` + `${data.installation}` + `\n\n`;
+        const usage = `## ` + `${headers[2]}` + `\n\n` + `${data.usage}` + `\n\n`;
+        const contributing = `## ` + `${headers[3]}` + `\n\n` + `${data.contributing}` + `\n\n`;
+        const tests = `## ` + `${headers[4]}` + `\n\n` + `${data.tests}` + `\n\n`;
+        const license = `## ` + `${headers[5]}` + `\n\n` + `${data.license}` + `\n\n`;
+        const questions = `## ` + `${headers[6]}` + `\n\n` + `* ` + `${data.qEmail}` + `\n` + `* ` + `https://github.com/` + `${data.qGithub}` + `\n\n`;
 
         readmeText = [];
         readmeText.push(title);
