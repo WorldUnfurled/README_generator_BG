@@ -52,7 +52,7 @@ inquirer
             message: "What is the Github profile for this project's repo?"
         }
     ]).then((data) => {
-        const title = `# ` + `${headers[0]}` + `\n\n` + `${data.title}` + `\n\n`;
+        const title = `# ` + `${headers[0]}` + `\n\n`;
         const description = `## ` + `${headers[1]}` + `\n\n` + `${data.description}` + `\n\n`;
         const installation = `## ` + `${headers[2]}` + `\n\n` + `${data.installation}` + `\n\n`;
         const usage = `## ` + `${headers[3]}` + `\n\n` + `${data.usage}` + `\n\n`;
