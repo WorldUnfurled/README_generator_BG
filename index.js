@@ -70,6 +70,18 @@ inquirer
             return licenseSite;
         }
 
+        let licenseGen = () => {
+            if (data.license == 'MIT') {
+                var license = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+            } else if (data.license == 'Apache') {
+                var license = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+            } else {
+                var license = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+            }
+
+            return license;
+        }
+
         const title = `# ` + `${data.title}` + `\n\n`;
 
         const tOC = `## ` + `Table of Contents` + `\n\n`;
@@ -92,10 +104,11 @@ This file is part of the ${data.title} project.
         
 The ${data.title} project can not be copied and/or distributed without the express permission of ${data.qGithub} < ${data.qEmail} >.` + `\n\n`;
 
-        const questions = `## ` + `${headers[6]}` + `\n\n` + `* ` + `${data.qEmail}` + `\n` + `* ` + `https://github.com/` + `${data.qGithub}` + `\n\n`;
+        const questions = `## ` + `${headers[6]}` + `\n` + `Have questions? Contact me with either link:` + `\n\n` + `* ` + `Email: ` + `${data.qEmail}` + `\n` + `* ` + `Github: ` + `https://github.com/` + `${data.qGithub}` + `\n\n`;
 
         readmeText = [];
         readmeText.push(title);
+        readmeText.push(licenseGen());
         readmeText.push(tOC);
         readmeText.push(tableOfContents);
         readmeText.push(description);
