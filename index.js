@@ -52,15 +52,15 @@ inquirer
             message: "What is the Github profile for this project's repo?"
         }
     ]).then((data) => {
-        const tableOfContents = '';
+        let tableOfContents = '';
 
         for (i = 1; i < headers.length; i++) {
-            tableOfContents += `${i}` + `${headers[i-1]}` + `\n`;
+            tableOfContents += `[` + `${i}` + `. ` + `${headers[i-1]}` + `]` + `(` + `#`  + `${headers[i-1]}` + `)` + `\n`;
         }
 
         const title = `# ` + `${headers[0]}` + `\n\n`;
         const tOC = `# ` + `Table of Contents` + `\n\n`;
-        const description = `## ` + `${headers[1]}` + `\n\n` + `${data.description}` + `\n\n`;
+        const description = `\n\n` + `## ` + `${headers[1]}` + `\n\n` + `${data.description}` + `\n\n`;
         const installation = `## ` + `${headers[2]}` + `\n\n` + `${data.installation}` + `\n\n`;
         const usage = `## ` + `${headers[3]}` + `\n\n` + `${data.usage}` + `\n\n`;
         const contributing = `## ` + `${headers[4]}` + `\n\n` + `${data.contributing}` + `\n\n`;
@@ -80,7 +80,7 @@ inquirer
         readmeText.push(license);
         readmeText.push(questions);
 
-        readmeGen = '';
+        let readmeGen = '';
         for (i = 0; i < readmeText.length; i++) {
             readmeGen += readmeText[i];
         }
