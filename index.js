@@ -52,7 +52,14 @@ inquirer
             message: "What is the Github profile for this project's repo?"
         }
     ]).then((data) => {
+        const tableOfContents = '';
+
+        for (i = 1; i < headers.length; i++) {
+            tableOfContents += `${i}` + `${headers[i-1]}` + `\n`;
+        }
+
         const title = `# ` + `${headers[0]}` + `\n\n`;
+        const tOC = `# ` + `Table of Contents` + `\n\n`;
         const description = `## ` + `${headers[1]}` + `\n\n` + `${data.description}` + `\n\n`;
         const installation = `## ` + `${headers[2]}` + `\n\n` + `${data.installation}` + `\n\n`;
         const usage = `## ` + `${headers[3]}` + `\n\n` + `${data.usage}` + `\n\n`;
@@ -63,6 +70,8 @@ inquirer
 
         readmeText = [];
         readmeText.push(title);
+        readmeText.push(tOC);
+        readmeText.push(tableOfContents);
         readmeText.push(description);
         readmeText.push(installation);
         readmeText.push(usage);
@@ -77,6 +86,6 @@ inquirer
         }
 
         fs.writeFile('sampleREADME.md', readmeGen, (err) => {
-            err ? console.error(err) : console.log('Commit logged!')
+            err ? console.error(err) : console.log('README successfully generated.')
         });
     });
